@@ -1,0 +1,5400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Feliz cumpleaños, mi Magui ❤️</title>
+
+<style>
+
+/* ==============================
+   CONFIGURACIÓN GENERAL
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: Georgia, "Times New Roman", serif;
+    background:#10070d;
+    color:white;
+    overflow:hidden;
+}
+
+
+/* ==============================
+   PORTADA
+================================ */
+
+#portada{
+    position:fixed;
+    inset:0;
+
+    width:100%;
+    height:100vh;
+    height:100dvh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #5b2039 0%,
+            #2b101f 35%,
+            #130810 70%,
+            #090408 100%
+        );
+
+    z-index:100;
+
+    overflow:hidden;
+
+    transition:
+        opacity 1.4s ease,
+        visibility 1.4s ease;
+}
+
+
+/* Resplandor central */
+
+.resplandor{
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,170,200,.16),
+            rgba(255,120,170,.05) 45%,
+            transparent 70%
+        );
+
+    animation:respirar 4s ease-in-out infinite;
+}
+
+@keyframes respirar{
+
+    0%,100%{
+        transform:scale(.9);
+        opacity:.55;
+    }
+
+    50%{
+        transform:scale(1.15);
+        opacity:1;
+    }
+}
+
+
+/* ==============================
+   CONTENIDO DE LA PORTADA
+================================ */
+
+.contenido-portada{
+    position:relative;
+    z-index:5;
+
+    width:90%;
+    max-width:700px;
+
+    padding:30px 20px;
+
+    animation:entrada 2s ease;
+}
+
+@keyframes entrada{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* Texto pequeño */
+
+.dedicado{
+    font-size:15px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:#e9b9ca;
+
+    margin-bottom:25px;
+
+    opacity:.9;
+}
+
+
+/* Título */
+
+.titulo{
+    font-size:clamp(38px,8vw,72px);
+
+    font-weight:normal;
+
+    line-height:1.05;
+
+    margin-bottom:12px;
+
+    text-shadow:
+        0 0 15px rgba(255,170,200,.25);
+}
+
+
+/* Nombre */
+
+.magui{
+    display:block;
+
+    margin-top:10px;
+
+    font-style:italic;
+
+    color:#ffc2d6;
+
+    text-shadow:
+        0 0 20px rgba(255,150,190,.35);
+}
+
+
+/* Línea decorativa */
+
+.linea{
+    width:0;
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ffc2d6,
+            transparent
+        );
+
+    margin:28px auto;
+
+    animation:abrirLinea 2s ease forwards;
+    animation-delay:1s;
+}
+
+@keyframes abrirLinea{
+    to{
+        width:180px;
+    }
+}
+
+
+/* Mensaje */
+
+.subtitulo{
+    font-size:18px;
+
+    line-height:1.7;
+
+    color:#f5dfe7;
+
+    margin-bottom:35px;
+
+    opacity:.9;
+}
+
+
+/* ==============================
+   BOTÓN
+================================ */
+
+.boton-sorpresa{
+
+    border:1px solid rgba(255,194,214,.65);
+
+    background:
+        rgba(255,255,255,.06);
+
+    color:white;
+
+    padding:15px 28px;
+
+    border-radius:50px;
+
+    font-family:Georgia, serif;
+
+    font-size:16px;
+
+    letter-spacing:.5px;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(8px);
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+
+    animation:aparecerBoton 2s ease forwards;
+    animation-delay:1.5s;
+
+    opacity:0;
+}
+
+@keyframes aparecerBoton{
+
+    to{
+        opacity:1;
+    }
+}
+
+
+.boton-sorpresa:hover{
+
+    transform:translateY(-3px) scale(1.03);
+
+    background:
+        rgba(255,194,214,.15);
+
+    box-shadow:
+        0 8px 30px
+        rgba(255,120,170,.18);
+}
+
+
+/* ==============================
+   LUCES FLOTANTES
+================================ */
+
+.luz{
+
+    position:absolute;
+
+    width:4px;
+    height:4px;
+
+    border-radius:50%;
+
+    background:#ffd4e2;
+
+    box-shadow:
+        0 0 8px #ffc1d6,
+        0 0 16px rgba(255,170,200,.7);
+
+    opacity:0;
+
+    animation:
+        flotar linear infinite;
+}
+
+
+@keyframes flotar{
+
+    0%{
+        transform:
+            translateY(110vh)
+            scale(.5);
+
+        opacity:0;
+    }
+
+    15%{
+        opacity:.8;
+    }
+
+    80%{
+        opacity:.5;
+    }
+
+    100%{
+        transform:
+            translateY(-20vh)
+            scale(1.2);
+
+        opacity:0;
+    }
+}
+
+
+/* ==============================
+   CORAZÓN PEQUEÑO
+================================ */
+
+.corazon{
+    font-size:22px;
+
+    margin-bottom:20px;
+
+    animation:latido 1.8s ease-in-out infinite;
+}
+
+@keyframes latido{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.18);
+    }
+}
+
+
+/* ==============================
+   SALIDA DE LA PORTADA
+================================ */
+
+#portada.ocultar{
+
+    opacity:0;
+    visibility:hidden;
+
+    pointer-events:none;
+}
+
+
+/* ==============================
+   AJUSTES PARA CELULAR
+================================ */
+
+@media(max-width:600px){
+
+    .contenido-portada{
+        padding:25px;
+    }
+
+    .dedicado{
+        font-size:12px;
+        letter-spacing:3px;
+    }
+
+    .subtitulo{
+        font-size:16px;
+    }
+
+    .boton-sorpresa{
+        font-size:15px;
+        padding:14px 24px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =============================
+     PORTADA DE CUMPLEAÑOS
+================================ -->
+
+<section id="portada">
+
+    <div class="resplandor"></div>
+
+
+    <div class="contenido-portada">
+
+        <div class="corazon">
+            ❤️
+        </div>
+
+        <p class="dedicado">
+            Para alguien muy especial
+        </p>
+
+
+        <h1 class="titulo">
+
+            Feliz cumpleaños,
+
+            <span class="magui">
+                mi vida hermosa
+            </span>
+
+        </h1>
+
+
+        <div class="linea"></div>
+
+
+        <p class="subtitulo">
+
+            Hoy, 4 de octubre, quiero darte
+            este pequeñito detalle hecho con muchísimo cariño.
+
+            <br><br>
+
+            Esta es una pequeña sorpresa para ti...
+
+        </p>
+
+
+        <button
+            class="boton-sorpresa"
+            id="abrirSorpresa">
+
+            Abrir mi sorpresa ❤️
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* ==============================
+   CREAR LUCES FLOTANTES
+================================ */
+
+const portada =
+    document.getElementById("portada");
+
+
+function crearLuz(){
+
+    const luz =
+        document.createElement("span");
+
+    luz.className = "luz";
+
+
+    luz.style.left =
+        Math.random() * 100 + "%";
+
+
+    luz.style.animationDuration =
+        (6 + Math.random() * 7) + "s";
+
+
+    luz.style.animationDelay =
+        (Math.random() * 5) + "s";
+
+
+    const tamaño =
+        2 + Math.random() * 4;
+
+    luz.style.width =
+        tamaño + "px";
+
+    luz.style.height =
+        tamaño + "px";
+
+
+    portada.appendChild(luz);
+
+}
+
+
+for(let i = 0; i < 35; i++){
+
+    crearLuz();
+
+}
+
+</script>
+<!-- ==================================================
+     PARTE 2 — COMIENZA LA SORPRESA
+================================================== -->
+
+<style>
+
+/* ==============================
+   ESCENA DE CUMPLEAÑOS
+================================ */
+
+#cumple{
+    position:fixed;
+    inset:0;
+
+    width:100%;
+    height:100vh;
+    height:100dvh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #64213e 0%,
+            #32101f 38%,
+            #170810 72%,
+            #090408 100%
+        );
+
+    opacity:0;
+    visibility:hidden;
+
+    overflow:hidden;
+
+    transition:
+        opacity 1.5s ease,
+        visibility 1.5s ease;
+
+    z-index:50;
+}
+
+
+/* Mostrar escena */
+
+#cumple.mostrar{
+    opacity:1;
+    visibility:visible;
+}
+
+
+/* ==============================
+   CONTENIDO
+================================ */
+
+.contenido-cumple{
+    position:relative;
+
+    z-index:5;
+
+    width:90%;
+    max-width:750px;
+
+    padding:30px 20px;
+}
+
+
+/* ==============================
+   NÚMERO 26
+================================ */
+
+.numero26{
+    font-size:clamp(95px,25vw,180px);
+
+    font-weight:normal;
+
+    line-height:.85;
+
+    color:#ffd0df;
+
+    opacity:0;
+
+    transform:
+        translateY(25px)
+        scale(.85);
+
+    text-shadow:
+        0 0 25px rgba(255,150,190,.30),
+        0 0 60px rgba(255,100,160,.15);
+}
+
+
+#cumple.mostrar .numero26{
+    animation:
+        aparecer26 1.8s ease forwards .5s;
+}
+
+
+@keyframes aparecer26{
+
+    0%{
+        opacity:0;
+
+        transform:
+            translateY(30px)
+            scale(.8);
+    }
+
+    60%{
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1.05);
+    }
+
+    100%{
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* ==============================
+   AÑOS
+================================ */
+
+.anios{
+    margin-top:18px;
+
+    font-size:14px;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    color:#eab6c8;
+
+    opacity:0;
+}
+
+
+#cumple.mostrar .anios{
+    animation:
+        aparecerTexto 1.4s ease forwards 1.5s;
+}
+
+
+/* ==============================
+   FRASE PRINCIPAL
+================================ */
+
+.frase-cumple{
+
+    margin-top:35px;
+
+    font-size:
+        clamp(24px,6vw,38px);
+
+    font-weight:normal;
+
+    line-height:1.3;
+
+    color:white;
+
+    opacity:0;
+
+    transform:
+        translateY(15px);
+}
+
+
+#cumple.mostrar .frase-cumple{
+
+    animation:
+        aparecerTexto 1.5s ease forwards 2.2s;
+}
+
+
+/* Nombre destacado */
+
+.nombre-magui{
+    display:block;
+
+    margin-top:8px;
+
+    color:#ffc4d7;
+
+    font-style:italic;
+}
+
+
+/* ==============================
+   MENSAJE
+================================ */
+
+.mensaje-cumple{
+
+    margin:
+        28px auto 0;
+
+    max-width:580px;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#f4dfe7;
+
+    opacity:0;
+
+    transform:
+        translateY(15px);
+}
+
+
+#cumple.mostrar .mensaje-cumple{
+
+    animation:
+        aparecerTexto 1.5s ease forwards 3s;
+}
+
+
+@keyframes aparecerTexto{
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* ==============================
+   BOTÓN CONTINUAR
+================================ */
+
+#continuar{
+
+    margin-top:35px;
+
+    border:
+        1px solid
+        rgba(255,194,214,.65);
+
+    background:
+        rgba(255,255,255,.06);
+
+    color:white;
+
+    padding:
+        14px 27px;
+
+    border-radius:50px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    backdrop-filter:
+        blur(8px);
+
+    opacity:0;
+
+    transform:
+        translateY(15px);
+
+    pointer-events:none;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+
+#cumple.mostrar #continuar{
+
+    animation:
+        mostrarContinuar
+        1.5s ease forwards 4.2s;
+}
+
+
+@keyframes mostrarContinuar{
+
+    to{
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+        pointer-events:auto;
+    }
+
+}
+
+
+#continuar:hover{
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(255,194,214,.15);
+
+    box-shadow:
+        0 8px 30px
+        rgba(255,120,170,.18);
+}
+
+
+/* ==============================
+   PÉTALOS
+================================ */
+
+.petalo{
+
+    position:absolute;
+
+    top:-50px;
+
+    width:12px;
+    height:18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffd0df,
+            #e98aaa
+        );
+
+    border-radius:
+        70% 30%
+        70% 30%;
+
+    opacity:.75;
+
+    pointer-events:none;
+
+    animation:
+        caerPetalo linear forwards;
+}
+
+
+@keyframes caerPetalo{
+
+    0%{
+
+        transform:
+            translateY(-10vh)
+            translateX(0)
+            rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    10%{
+        opacity:.8;
+    }
+
+    50%{
+
+        transform:
+            translateY(50vh)
+            translateX(35px)
+            rotate(180deg);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(115vh)
+            translateX(-25px)
+            rotate(420deg);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* ==============================
+   ESTRELLITAS
+================================ */
+
+.brillo{
+
+    position:absolute;
+
+    width:3px;
+    height:3px;
+
+    background:white;
+
+    border-radius:50%;
+
+    box-shadow:
+        0 0 10px
+        rgba(255,220,235,.8);
+
+    opacity:.4;
+
+    animation:
+        parpadear 3s
+        ease-in-out infinite;
+}
+
+
+@keyframes parpadear{
+
+    0%,100%{
+        opacity:.15;
+        transform:scale(.8);
+    }
+
+    50%{
+        opacity:.8;
+        transform:scale(1.5);
+    }
+
+}
+
+
+/* ==============================
+   CELULAR
+================================ */
+
+@media(max-width:600px){
+
+    .contenido-cumple{
+        padding:
+            20px 24px;
+    }
+
+    .mensaje-cumple{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .anios{
+        font-size:11px;
+        letter-spacing:5px;
+    }
+
+    #continuar{
+        margin-top:28px;
+    }
+
+}
+
+</style>
+
+
+
+<!-- ==================================================
+     ESCENA DE LOS 26 AÑOS
+================================================== -->
+
+<section id="cumple">
+
+    <div class="contenido-cumple">
+
+
+        <div class="numero26">
+            26
+        </div>
+
+
+        <div class="anios">
+            años de una vida preciosa
+        </div>
+
+
+        <h2 class="frase-cumple">
+
+            Hoy celebro tu vida,
+
+            <span class="nombre-magui">
+                mi nena preciosa
+            </span>
+
+        </h2>
+
+
+        <p class="mensaje-cumple">
+
+            Porque hoy no es solamente
+            tu cumpleaños...
+
+            <br><br>
+
+            Hoy celebro que existas,
+            que seas tú y que la vida
+            me haya permitido coincidir contigo.
+
+            ❤️
+
+        </p>
+
+
+        <button id="continuar">
+
+            Hay algo que quiero decirte...
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+/* ==================================================
+   ABRIR LA SORPRESA
+================================================== */
+
+const botonAbrir =
+    document.getElementById("abrirSorpresa");
+
+const cumple =
+    document.getElementById("cumple");
+
+
+botonAbrir.addEventListener(
+    "click",
+    function(){
+
+        /* Ocultar portada */
+
+        portada.classList.add("ocultar");
+
+
+        /* Mostrar cumpleaños */
+
+        setTimeout(function(){
+
+            cumple.classList.add("mostrar");
+
+            crearPetalos();
+
+        },700);
+
+    }
+);
+
+
+/* ==================================================
+   CREAR BRILLOS
+================================================== */
+
+function crearBrillos(){
+
+    for(let i = 0; i < 30; i++){
+
+        const brillo =
+            document.createElement("span");
+
+        brillo.className =
+            "brillo";
+
+
+        brillo.style.left =
+            Math.random() * 100 + "%";
+
+        brillo.style.top =
+            Math.random() * 100 + "%";
+
+
+        brillo.style.animationDelay =
+            Math.random() * 4 + "s";
+
+
+        brillo.style.animationDuration =
+            (2 + Math.random() * 3)
+            + "s";
+
+
+        cumple.appendChild(brillo);
+
+    }
+
+}
+
+
+crearBrillos();
+
+
+/* ==================================================
+   CREAR PÉTALOS
+================================================== */
+
+function crearPetalos(){
+
+    /* Primer grupo */
+
+    for(let i = 0; i < 25; i++){
+
+        setTimeout(function(){
+
+            lanzarPetalo();
+
+        },i * 180);
+
+    }
+
+
+    /* Después siguen apareciendo */
+
+    setInterval(function(){
+
+        if(
+            cumple.classList.contains(
+                "mostrar"
+            )
+        ){
+
+            lanzarPetalo();
+
+        }
+
+    },650);
+
+}
+
+
+/* ==================================================
+   LANZAR UN PÉTALO
+================================================== */
+
+function lanzarPetalo(){
+
+    const petalo =
+        document.createElement("span");
+
+
+    petalo.className =
+        "petalo";
+
+
+    petalo.style.left =
+        Math.random() * 100 + "%";
+
+
+    const tamaño =
+        8 + Math.random() * 10;
+
+
+    petalo.style.width =
+        tamaño + "px";
+
+    petalo.style.height =
+        tamaño * 1.4 + "px";
+
+
+    petalo.style.animationDuration =
+        (6 + Math.random() * 5)
+        + "s";
+
+
+    petalo.style.opacity =
+        .4 + Math.random() * .5;
+
+
+    cumple.appendChild(petalo);
+
+
+    /* Eliminar para no saturar la página */
+
+    setTimeout(function(){
+
+        petalo.remove();
+
+    },12000);
+
+}
+
+</script>
+<!-- ==================================================
+     PARTE 3 — EL SOBRE
+================================================== -->
+
+<style>
+
+/* ==============================
+   ESCENA DE LA CARTA
+================================ */
+
+#escenaCarta{
+    position:fixed;
+    inset:0;
+
+    width:100%;
+    height:100vh;
+    height:100dvh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            #5a2038 0%,
+            #2d101e 40%,
+            #160810 72%,
+            #090408 100%
+        );
+
+    opacity:0;
+    visibility:hidden;
+
+    overflow:hidden;
+
+    z-index:80;
+
+    transition:
+        opacity 1.4s ease,
+        visibility 1.4s ease;
+}
+
+
+#escenaCarta.mostrar{
+    opacity:1;
+    visibility:visible;
+}
+
+
+/* ==============================
+   CONTENIDO
+================================ */
+
+.contenido-carta{
+    position:relative;
+
+    z-index:10;
+
+    width:90%;
+    max-width:650px;
+
+    text-align:center;
+
+    padding:25px;
+}
+
+
+/* ==============================
+   TEXTO SUPERIOR
+================================ */
+
+.para-ti{
+    font-size:14px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:#e8b6c7;
+
+    margin-bottom:15px;
+
+    opacity:0;
+
+    transform:translateY(15px);
+}
+
+
+#escenaCarta.mostrar .para-ti{
+    animation:
+        aparecerCartaTexto
+        1.3s ease forwards .5s;
+}
+
+
+.titulo-carta{
+    font-size:
+        clamp(32px,7vw,52px);
+
+    font-weight:normal;
+
+    font-style:italic;
+
+    color:#ffd0df;
+
+    margin-bottom:45px;
+
+    opacity:0;
+
+    transform:translateY(15px);
+
+    text-shadow:
+        0 0 25px
+        rgba(255,160,195,.25);
+}
+
+
+#escenaCarta.mostrar .titulo-carta{
+    animation:
+        aparecerCartaTexto
+        1.5s ease forwards .9s;
+}
+
+
+@keyframes aparecerCartaTexto{
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* ==============================
+   CONTENEDOR DEL SOBRE
+================================ */
+
+.sobre-contenedor{
+
+    position:relative;
+
+    width:300px;
+    height:205px;
+
+    margin:
+        0 auto 45px;
+
+    opacity:0;
+
+    transform:
+        translateY(30px)
+        scale(.9);
+}
+
+
+#escenaCarta.mostrar
+.sobre-contenedor{
+
+    animation:
+        aparecerSobre
+        1.5s
+        cubic-bezier(.2,.8,.2,1)
+        forwards 1.4s;
+}
+
+
+@keyframes aparecerSobre{
+
+    to{
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* ==============================
+   SOMBRA DEL SOBRE
+================================ */
+
+.sombra-sobre{
+
+    position:absolute;
+
+    left:15px;
+    right:15px;
+
+    bottom:-25px;
+
+    height:30px;
+
+    background:
+        rgba(0,0,0,.35);
+
+    border-radius:50%;
+
+    filter:blur(13px);
+
+}
+
+
+/* ==============================
+   SOBRE
+================================ */
+
+.sobre{
+
+    position:absolute;
+
+    width:300px;
+    height:190px;
+
+    left:0;
+    top:0;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f3c5d2,
+            #d88da5
+        );
+
+    border-radius:
+        5px 5px 10px 10px;
+
+    box-shadow:
+        0 18px 45px
+        rgba(0,0,0,.28);
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:
+        transform .35s ease;
+}
+
+
+.sobre:hover{
+    transform:
+        translateY(-4px);
+}
+
+
+/* ==============================
+   PARTE INFERIOR DEL SOBRE
+================================ */
+
+.sobre::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:0;
+    height:0;
+
+    border-left:
+        150px solid
+        transparent;
+
+    border-right:
+        150px solid
+        transparent;
+
+    border-bottom:
+        110px solid
+        #e8aabe;
+
+    z-index:4;
+}
+
+
+/* ==============================
+   LADOS DEL SOBRE
+================================ */
+
+.sobre::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            35deg,
+            #dda0b4 0 49%,
+            transparent 50%
+        ),
+        linear-gradient(
+            -35deg,
+            #dda0b4 0 49%,
+            transparent 50%
+        );
+
+    z-index:3;
+}
+
+
+/* ==============================
+   SOLAPA SUPERIOR
+================================ */
+
+.solapa{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:0;
+    height:0;
+
+    border-left:
+        150px solid transparent;
+
+    border-right:
+        150px solid transparent;
+
+    border-top:
+        105px solid #f8d6df;
+
+    transform-origin:
+        top center;
+
+    z-index:6;
+
+    transition:
+        transform 1s ease;
+}
+
+
+/* ==============================
+   PAPEL INTERIOR
+================================ */
+
+.papel-mini{
+
+    position:absolute;
+
+    width:250px;
+    height:150px;
+
+    left:25px;
+    bottom:10px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fffaf7,
+            #f8e8e8
+        );
+
+    border-radius:5px;
+
+    z-index:2;
+
+    transition:
+        transform 1.1s ease,
+        height 1.1s ease;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,.15);
+}
+
+
+/* ==============================
+   CORAZÓN DEL SOBRE
+================================ */
+
+.sello{
+
+    position:absolute;
+
+    left:50%;
+    top:91px;
+
+    transform:
+        translate(-50%,-50%);
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+        #8f294e;
+
+    color:white;
+
+    font-size:20px;
+
+    z-index:8;
+
+    box-shadow:
+        0 5px 15px
+        rgba(75,10,35,.35);
+
+    transition:
+        transform .5s ease,
+        opacity .5s ease;
+}
+
+
+/* ==============================
+   ANIMACIÓN AL ABRIR
+================================ */
+
+.sobre.abierto
+.solapa{
+
+    transform:
+        rotateX(180deg);
+
+    z-index:1;
+}
+
+
+.sobre.abierto
+.sello{
+
+    opacity:0;
+
+    transform:
+        translate(-50%,-50%)
+        scale(.4);
+}
+
+
+.sobre.abierto
+.papel-mini{
+
+    transform:
+        translateY(-75px);
+
+}
+
+
+/* ==============================
+   TEXTO DEL PAPEL
+================================ */
+
+.mensaje-mini{
+
+    position:absolute;
+
+    width:100%;
+
+    top:35px;
+
+    text-align:center;
+
+    color:#6f2942;
+
+    font-size:16px;
+
+    font-style:italic;
+
+    line-height:1.5;
+}
+
+
+/* ==============================
+   BOTÓN ABRIR CARTA
+================================ */
+
+#abrirCarta{
+
+    border:
+        1px solid
+        rgba(255,194,214,.65);
+
+    background:
+        rgba(255,255,255,.06);
+
+    color:white;
+
+    padding:
+        14px 28px;
+
+    border-radius:50px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    backdrop-filter:
+        blur(8px);
+
+    opacity:0;
+
+    transform:
+        translateY(15px);
+
+    pointer-events:none;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+
+#escenaCarta.mostrar
+#abrirCarta{
+
+    animation:
+        aparecerBotonCarta
+        1.3s ease forwards 2.6s;
+}
+
+
+@keyframes aparecerBotonCarta{
+
+    to{
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+        pointer-events:auto;
+    }
+
+}
+
+
+#abrirCarta:hover{
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(255,194,214,.15);
+
+    box-shadow:
+        0 8px 30px
+        rgba(255,120,170,.18);
+}
+
+
+/* ==============================
+   FRASE INFERIOR
+================================ */
+
+.frase-carta{
+
+    margin-top:22px;
+
+    font-size:13px;
+
+    letter-spacing:1px;
+
+    color:#dbaabc;
+
+    opacity:0;
+}
+
+
+#escenaCarta.mostrar
+.frase-carta{
+
+    animation:
+        aparecerCartaTexto
+        1.3s ease forwards 3.1s;
+}
+
+
+/* ==============================
+   DESTELLOS
+================================ */
+
+.destello-carta{
+
+    position:absolute;
+
+    width:4px;
+    height:4px;
+
+    border-radius:50%;
+
+    background:#ffd4e2;
+
+    box-shadow:
+        0 0 12px
+        rgba(255,190,215,.9);
+
+    opacity:0;
+
+    animation:
+        destelloCarta
+        3s ease-in-out infinite;
+}
+
+
+@keyframes destelloCarta{
+
+    0%,100%{
+        opacity:.1;
+        transform:scale(.7);
+    }
+
+    50%{
+        opacity:.9;
+        transform:scale(1.5);
+    }
+
+}
+
+
+/* ==============================
+   CELULAR
+================================ */
+
+@media(max-width:600px){
+
+    .sobre-contenedor{
+
+        width:270px;
+        height:190px;
+
+    }
+
+
+    .sobre{
+
+        width:270px;
+        height:175px;
+
+    }
+
+
+    .sobre::before{
+
+        border-left:
+            135px solid transparent;
+
+        border-right:
+            135px solid transparent;
+
+        border-bottom:
+            100px solid #e8aabe;
+
+    }
+
+
+    .solapa{
+
+        border-left:
+            135px solid transparent;
+
+        border-right:
+            135px solid transparent;
+
+        border-top:
+            95px solid #f8d6df;
+
+    }
+
+
+    .papel-mini{
+
+        width:220px;
+
+    }
+
+
+    .sello{
+
+        top:83px;
+
+    }
+
+}
+
+</style>
+
+
+
+<!-- ==================================================
+     ESCENA DEL SOBRE
+================================================== -->
+
+<section id="escenaCarta">
+
+
+    <div class="contenido-carta">
+
+
+        <p class="para-ti">
+            Hay palabras que quiero regalarte
+        </p>
+
+
+        <h2 class="titulo-carta">
+            Para ti, mi Magui ❤️
+        </h2>
+
+
+        <div class="sobre-contenedor">
+
+
+            <div class="sombra-sobre"></div>
+
+
+            <div
+                class="sobre"
+                id="sobre">
+
+
+                <div class="papel-mini">
+
+                    <div class="mensaje-mini">
+
+                        Para mi<br>
+                        Magui preciosa ❤️
+
+                    </div>
+
+                </div>
+
+
+                <div class="solapa"></div>
+
+
+                <div class="sello">
+                    ♥
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <button id="abrirCarta">
+
+            Abrir mi carta ❤️
+
+        </button>
+
+
+        <p class="frase-carta">
+
+            La escribí pensando en ti...
+
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+
+<script>
+
+/* ==================================================
+   ELEMENTOS
+================================================== */
+
+const botonContinuar =
+    document.getElementById("continuar");
+
+const escenaCarta =
+    document.getElementById("escenaCarta");
+
+const sobre =
+    document.getElementById("sobre");
+
+const botonCarta =
+    document.getElementById("abrirCarta");
+
+
+/* ==================================================
+   PASAR DEL 26 AL SOBRE
+================================================== */
+
+botonContinuar.addEventListener(
+    "click",
+    function(){
+
+        /* Ocultamos la escena de cumpleaños */
+
+        cumple.style.opacity = "0";
+
+
+        setTimeout(function(){
+
+            cumple.style.visibility =
+                "hidden";
+
+            cumple.classList.remove(
+                "mostrar"
+            );
+
+
+            /* Mostramos el sobre */
+
+            escenaCarta.classList.add(
+                "mostrar"
+            );
+
+        },900);
+
+    }
+);
+
+
+/* ==================================================
+   ABRIR EL SOBRE
+================================================== */
+
+let sobreAbierto = false;
+
+
+function abrirSobre(){
+
+    if(sobreAbierto){
+        return;
+    }
+
+
+    sobreAbierto = true;
+
+
+    sobre.classList.add(
+        "abierto"
+    );
+
+
+    /* Cambiar texto del botón */
+
+    botonCarta.innerHTML =
+        "Leer mi carta ❤️";
+
+
+    /* Pequeño movimiento del botón */
+
+    botonCarta.animate(
+
+        [
+            {
+                transform:
+                    "scale(1)"
+            },
+
+            {
+                transform:
+                    "scale(1.06)"
+            },
+
+            {
+                transform:
+                    "scale(1)"
+            }
+        ],
+
+        {
+            duration:700,
+            easing:"ease"
+        }
+
+    );
+
+}
+
+
+/* Puede abrir tocando el sobre */
+
+sobre.addEventListener(
+    "click",
+    abrirSobre
+);
+
+
+/* O tocando el botón */
+
+botonCarta.addEventListener(
+    "click",
+    function(){
+
+        if(!sobreAbierto){
+
+            abrirSobre();
+
+        }
+
+        else{
+
+            /*
+            EN LA PARTE 4
+            AQUÍ ABRIREMOS
+            LA CARTA COMPLETA
+            */
+
+        }
+
+    }
+);
+
+
+/* ==================================================
+   DESTELLOS DEL FONDO
+================================================== */
+
+function crearDestellosCarta(){
+
+    for(let i = 0; i < 28; i++){
+
+        const destello =
+            document.createElement("span");
+
+
+        destello.className =
+            "destello-carta";
+
+
+        destello.style.left =
+            Math.random() * 100 + "%";
+
+
+        destello.style.top =
+            Math.random() * 100 + "%";
+
+
+        destello.style.animationDelay =
+            Math.random() * 4 + "s";
+
+
+        destello.style.animationDuration =
+            (2 + Math.random() * 3)
+            + "s";
+
+
+        escenaCarta.appendChild(
+            destello
+        );
+
+    }
+
+}
+
+
+crearDestellosCarta();
+
+</script>
+<!-- ==================================================
+     PARTE 4 — CARTA COMPLETA PARA MAGUI
+================================================== -->
+
+<style>
+
+/* ==============================
+   ESCENA DE LA CARTA COMPLETA
+================================ */
+
+#cartaCompleta{
+    position:fixed;
+    inset:0;
+
+    width:100%;
+    height:100vh;
+    height:100dvh;
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            #572039 0%,
+            #2a0f1d 38%,
+            #12070d 75%,
+            #080306 100%
+        );
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    opacity:0;
+    visibility:hidden;
+
+    z-index:200;
+
+    transition:
+        opacity 1.5s ease,
+        visibility 1.5s ease;
+
+    scroll-behavior:smooth;
+}
+
+
+#cartaCompleta.mostrar{
+    opacity:1;
+    visibility:visible;
+}
+
+
+/* ==============================
+   FONDO DECORATIVO
+================================ */
+
+.fondo-carta-luces{
+    position:fixed;
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:0;
+}
+
+
+.luz-carta-final{
+    position:absolute;
+
+    width:4px;
+    height:4px;
+
+    border-radius:50%;
+
+    background:#ffd5e2;
+
+    box-shadow:
+        0 0 12px
+        rgba(255,190,215,.8);
+
+    animation:
+        brillarCartaFinal
+        3s ease-in-out infinite;
+}
+
+
+@keyframes brillarCartaFinal{
+
+    0%,100%{
+        opacity:.15;
+        transform:scale(.7);
+    }
+
+    50%{
+        opacity:.8;
+        transform:scale(1.5);
+    }
+
+}
+
+
+/* ==============================
+   CONTENEDOR PRINCIPAL
+================================ */
+
+.contenedor-carta-final{
+
+    position:relative;
+
+    z-index:5;
+
+    width:92%;
+    max-width:760px;
+
+    margin:0 auto;
+
+    padding:
+        80px 0 120px;
+}
+
+
+/* ==============================
+   PEQUEÑA INTRODUCCIÓN
+================================ */
+
+.intro-carta{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    opacity:0;
+
+    transform:
+        translateY(20px);
+}
+
+
+#cartaCompleta.mostrar
+.intro-carta{
+
+    animation:
+        aparecerElemento
+        1.5s ease forwards .5s;
+}
+
+
+.intro-carta p{
+
+    color:#dcaabd;
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    font-size:12px;
+
+    margin-bottom:15px;
+}
+
+
+.intro-carta h2{
+
+    color:#ffd0df;
+
+    font-size:
+        clamp(35px,8vw,58px);
+
+    font-weight:normal;
+
+    font-style:italic;
+
+    text-shadow:
+        0 0 25px
+        rgba(255,150,190,.25);
+}
+
+
+/* ==============================
+   HOJA DE PAPEL
+================================ */
+
+.hoja{
+
+    position:relative;
+
+    width:100%;
+
+    padding:
+        65px 65px 75px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffaf7 0%,
+            #fff5f3 50%,
+            #f9e8e8 100%
+        );
+
+    color:#542438;
+
+    border-radius:10px;
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.38);
+
+    opacity:0;
+
+    transform:
+        translateY(35px)
+        scale(.97);
+}
+
+
+#cartaCompleta.mostrar
+.hoja{
+
+    animation:
+        aparecerHoja
+        1.7s
+        cubic-bezier(.2,.8,.2,1)
+        forwards 1s;
+}
+
+
+@keyframes aparecerHoja{
+
+    to{
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* Brillo suave del papel */
+
+.hoja::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+
+    height:160px;
+
+    border-radius:
+        10px 10px 0 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.75),
+            transparent
+        );
+
+    pointer-events:none;
+}
+
+
+/* ==============================
+   DETALLE SUPERIOR
+================================ */
+
+.detalle-carta{
+
+    position:relative;
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+
+.corazon-carta{
+
+    font-size:27px;
+
+    margin-bottom:18px;
+
+    animation:
+        latidoCarta
+        2s ease-in-out infinite;
+}
+
+
+@keyframes latidoCarta{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.13);
+    }
+
+}
+
+
+.linea-carta{
+
+    width:120px;
+    height:1px;
+
+    margin:0 auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #b86b86,
+            transparent
+        );
+}
+
+
+/* ==============================
+   TEXTO DE LA CARTA
+================================ */
+
+.texto-carta{
+
+    position:relative;
+
+    z-index:2;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    letter-spacing:.1px;
+}
+
+
+.saludo-carta{
+
+    font-size:
+        clamp(28px,6vw,38px);
+
+    font-style:italic;
+
+    color:#862f50;
+
+    margin-bottom:35px;
+}
+
+
+/* Cada párrafo */
+
+.parrafo-carta{
+
+    margin-bottom:28px;
+
+    opacity:0;
+
+    transform:
+        translateY(14px);
+
+    transition:
+        opacity 1.1s ease,
+        transform 1.1s ease;
+}
+
+
+/* Cuando JavaScript lo revela */
+
+.parrafo-carta.visible{
+
+    opacity:1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* ==============================
+   FRASES ESPECIALES
+================================ */
+
+.frase-destacada{
+
+    color:#8d3152;
+
+    font-weight:bold;
+
+}
+
+
+.frase-profunda{
+
+    display:block;
+
+    margin:
+        38px 0;
+
+    padding:
+        25px 20px;
+
+    text-align:center;
+
+    font-size:
+        clamp(20px,5vw,25px);
+
+    line-height:1.6;
+
+    font-style:italic;
+
+    color:#8a3050;
+
+    border-top:
+        1px solid
+        rgba(138,48,80,.22);
+
+    border-bottom:
+        1px solid
+        rgba(138,48,80,.22);
+
+}
+
+
+/* ==============================
+   CIERRE
+================================ */
+
+.cierre-carta{
+
+    text-align:center;
+
+    margin-top:50px;
+
+    padding-top:35px;
+
+    border-top:
+        1px solid
+        rgba(130,50,80,.18);
+}
+
+
+.cierre-carta .te-adoro{
+
+    font-size:
+        clamp(25px,6vw,35px);
+
+    font-style:italic;
+
+    color:#862f50;
+
+    margin-bottom:12px;
+}
+
+
+.cierre-carta .feliz{
+
+    font-size:
+        clamp(22px,5vw,30px);
+
+    color:#6f2942;
+
+    font-weight:bold;
+
+    margin-bottom:35px;
+}
+
+
+.firma{
+
+    font-size:20px;
+
+    font-style:italic;
+
+    color:#9c5770;
+}
+
+
+/* ==============================
+   INDICADOR PARA BAJAR
+================================ */
+
+#indicadorScroll{
+
+    position:fixed;
+
+    left:50%;
+    bottom:20px;
+
+    transform:
+        translateX(-50%);
+
+    z-index:250;
+
+    color:#f4c3d4;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    text-align:center;
+
+    opacity:0;
+
+    pointer-events:none;
+}
+
+
+#cartaCompleta.mostrar
+#indicadorScroll{
+
+    animation:
+        mostrarIndicador
+        1s ease forwards 3s;
+}
+
+
+@keyframes mostrarIndicador{
+
+    to{
+        opacity:.75;
+    }
+
+}
+
+
+.flecha-scroll{
+
+    display:block;
+
+    margin-top:7px;
+
+    font-size:18px;
+
+    animation:
+        bajarFlecha
+        1.5s ease-in-out infinite;
+}
+
+
+@keyframes bajarFlecha{
+
+    0%,100%{
+        transform:
+            translateY(0);
+    }
+
+    50%{
+        transform:
+            translateY(6px);
+    }
+
+}
+
+
+/* ==============================
+   CELULAR
+================================ */
+
+@media(max-width:600px){
+
+    .contenedor-carta-final{
+
+        width:91%;
+
+        padding:
+            55px 0 100px;
+    }
+
+
+    .hoja{
+
+        padding:
+            45px 27px 55px;
+    }
+
+
+    .texto-carta{
+
+        font-size:16px;
+
+        line-height:1.85;
+    }
+
+
+    .parrafo-carta{
+
+        margin-bottom:24px;
+    }
+
+
+    .frase-profunda{
+
+        padding:
+            22px 10px;
+
+        margin:
+            32px 0;
+    }
+
+}
+
+</style>
+
+
+
+<!-- ==================================================
+     CARTA COMPLETA
+================================================== -->
+
+<section id="cartaCompleta">
+
+
+    <!-- Luces del fondo -->
+
+    <div
+        class="fondo-carta-luces"
+        id="lucesCartaFinal">
+    </div>
+
+
+
+    <div class="contenedor-carta-final">
+
+
+        <!-- INTRO -->
+
+        <div class="intro-carta">
+
+            <p>
+                Un pedacito de mi corazón para ti
+            </p>
+
+            <h2>
+                Feliz cumpleaños ❤️
+            </h2>
+
+        </div>
+
+
+
+        <!-- HOJA -->
+
+        <article class="hoja">
+
+
+            <div class="detalle-carta">
+
+                <div class="corazon-carta">
+                    ❤️
+                </div>
+
+                <div class="linea-carta"></div>
+
+            </div>
+
+
+
+            <div class="texto-carta">
+
+
+                <!-- SALUDO -->
+
+                <div
+                    class="saludo-carta
+                           parrafo-carta">
+
+                    Mi Magui preciosa: ❤️
+
+                </div>
+
+
+
+                <!-- PÁRRAFO 1 -->
+
+                <p class="parrafo-carta">
+
+                    Hoy cumples 26 años, y mientras
+                    escribo esto no puedo evitar pensar
+                    en lo bonito que es que la vida haya
+                    hecho que nuestros caminos se
+                    encontraran.
+
+                </p>
+
+
+
+                <!-- PÁRRAFO 2 -->
+
+                <p class="parrafo-carta">
+
+                    No sé si alguna vez voy a encontrar
+                    las palabras exactas para explicarte
+                    todo lo que significas para mí,
+                    pero quiero intentarlo.
+
+                </p>
+
+
+
+                <!-- PÁRRAFO 3 -->
+
+                <p class="parrafo-carta">
+
+                    Te adoro. Te adoro por quién eres,
+                    por tu forma de mirar, por tu manera
+                    de sonreír, por esas pequeñas cosas
+                    que quizá tú no notas, pero que para
+                    mí hacen que seas tú y nadie más.
+
+                </p>
+
+
+
+                <!-- PÁRRAFO 4 -->
+
+                <p class="parrafo-carta">
+
+                    Me gusta compartir contigo,
+                    escucharte, reír contigo, abrazarte
+                    y simplemente saber que estás ahí.
+                    Hay personas que llegan a nuestra
+                    vida y pasan; y hay otras que, de
+                    alguna manera, dejan una huella que
+                    se queda y desean que se queden el
+                    resto de la vida.
+
+                    <span class="frase-profunda">
+
+                        Tú eres esa persona para mí.
+
+                    </span>
+
+                </p>
+
+
+
+                <!-- PÁRRAFO 5 -->
+
+                <p class="parrafo-carta">
+
+                    Y hoy, en tus 26 años, más que
+                    desearte cosas materiales, deseo
+                    que la vida sea bonita contigo.
+                    Que encuentres tranquilidad cuando
+                    la necesites, fuerza cuando las
+                    cosas se pongan difíciles, motivos
+                    para sonreír y personas que sepan
+                    valorar el corazón tan bonito que
+                    tienes.
+
+                </p>
+
+
+
+                <!-- PÁRRAFO 6 -->
+
+                <p class="parrafo-carta">
+
+                    Deseo que nunca tengas que dejar
+                    de ser tú, porque esos ojitos nunca
+                    mienten, jaja. Que nunca olvides
+                    cuánto vales y que siempre tengas
+                    presente que mereces amor, paz,
+                    felicidad y todos esos sueños que
+                    todavía tienes por cumplir.
+
+                </p>
+
+
+
+                <!-- PÁRRAFO 7 -->
+
+                <p class="parrafo-carta">
+
+                    Y si algún día la vida se pone
+                    difícil, quiero que recuerdes que
+                    aquí siempre me vas a tener y que
+                    sepas que hay alguien que te mira
+                    con muchísimo cariño y amor,
+                    y que piensa:
+
+                    <span class="frase-profunda">
+
+                        “qué bonito es coincidir con ella
+                        y qué afortunado soy de tenerla
+                        en mi vida”.
+
+                    </span>
+
+                </p>
+
+
+
+                <!-- PÁRRAFO 8 -->
+
+                <p class="parrafo-carta">
+
+                    Gracias por existir,
+                    mi nena preciosa.
+
+                    <br><br>
+
+                    Gracias por cada momento,
+                    cada sonrisa, cada abrazo
+                    y cada recuerdo que hemos
+                    ido construyendo.
+
+                </p>
+
+
+
+                <!-- PÁRRAFO 9 -->
+
+                <p class="parrafo-carta">
+
+                    <span class="frase-destacada">
+
+                        Feliz cumpleaños,
+                        mi preciosa. 🌷
+
+                    </span>
+
+                </p>
+
+
+
+                <!-- PÁRRAFO 10 -->
+
+                <p class="parrafo-carta">
+
+                    Que tus 26 sean el comienzo
+                    de un año lleno de cosas bonitas,
+                    de sueños cumplidos y de momentos
+                    que hagan que tu corazón se
+                    sienta en casa.
+
+                </p>
+
+
+
+                <!-- PÁRRAFO 11 -->
+
+                <p class="parrafo-carta">
+
+                    Y ojalá la vida todavía nos permita
+                    escribir juntos muchas páginas más
+                    de
+
+                    <span class="frase-destacada">
+
+                        esta nuestra historia.
+
+                    </span>
+
+                </p>
+
+
+
+                <!-- CIERRE -->
+
+                <div
+                    class="cierre-carta
+                           parrafo-carta">
+
+
+                    <div class="te-adoro">
+
+                        Te adoro muchísimo.
+
+                    </div>
+
+
+                    <div class="feliz">
+
+                        Feliz cumpleaños,
+                        Mi Vida. ❤️
+
+                    </div>
+
+
+                    <div class="firma">
+
+                        Santi
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+    </div>
+
+
+
+    <!-- Indicador de scroll -->
+
+    <div id="indicadorScroll">
+
+        Sigue leyendo
+
+        <span class="flecha-scroll">
+            ↓
+        </span>
+
+    </div>
+
+
+</section>
+
+
+
+<script>
+
+/* ==================================================
+   PARTE 4
+   ABRIR LA CARTA COMPLETA
+================================================== */
+
+const cartaCompleta =
+    document.getElementById(
+        "cartaCompleta"
+    );
+
+
+const indicadorScroll =
+    document.getElementById(
+        "indicadorScroll"
+    );
+
+
+/*
+   IMPORTANTE:
+
+   Ya existe un evento anterior
+   en el botón abrirCarta.
+
+   Agregamos un SEGUNDO evento
+   para detectar cuando el sobre
+   ya está abierto.
+*/
+
+
+botonCarta.addEventListener(
+    "click",
+    function(){
+
+        /*
+        Si el sobre todavía
+        no está abierto,
+        no hacemos nada aquí.
+
+        El código de la Parte 3
+        se encarga de abrirlo.
+        */
+
+        if(!sobreAbierto){
+            return;
+        }
+
+
+        /*
+        Esperamos un poquito.
+
+        Esto hace que cuando
+        Magui abre el sobre
+        por primera vez,
+        no salte inmediatamente
+        a la carta.
+        */
+
+        if(
+            botonCarta.innerHTML
+            .includes("Leer")
+        ){
+
+            abrirCartaCompleta();
+
+        }
+
+    }
+);
+
+
+
+/* ==================================================
+   FUNCIÓN PRINCIPAL
+================================================== */
+
+let cartaYaAbierta = false;
+
+
+function abrirCartaCompleta(){
+
+    if(cartaYaAbierta){
+        return;
+    }
+
+
+    cartaYaAbierta = true;
+
+
+    /* Desvanecer escena del sobre */
+
+    escenaCarta.style.opacity =
+        "0";
+
+
+    setTimeout(function(){
+
+
+        escenaCarta.style.visibility =
+            "hidden";
+
+
+        escenaCarta.classList.remove(
+            "mostrar"
+        );
+
+
+        /* Mostrar carta */
+
+        cartaCompleta.classList.add(
+            "mostrar"
+        );
+
+
+        /* Volver arriba */
+
+        cartaCompleta.scrollTop = 0;
+
+
+        /* Comenzar revelado */
+
+        setTimeout(function(){
+
+            revelarCarta();
+
+        },1400);
+
+
+    },1000);
+
+}
+
+
+
+/* ==================================================
+   REVELAR LOS PÁRRAFOS
+================================================== */
+
+function revelarCarta(){
+
+    const parrafos =
+        document.querySelectorAll(
+            ".parrafo-carta"
+        );
+
+
+    parrafos.forEach(
+        function(parrafo, indice){
+
+            setTimeout(
+                function(){
+
+                    parrafo.classList.add(
+                        "visible"
+                    );
+
+                },
+
+                indice * 650
+
+            );
+
+        }
+    );
+
+}
+
+
+
+/* ==================================================
+   OCULTAR "SIGUE LEYENDO"
+   CUANDO MAGUI BAJE
+================================================== */
+
+cartaCompleta.addEventListener(
+    "scroll",
+    function(){
+
+        if(
+            cartaCompleta.scrollTop
+            > 120
+        ){
+
+            indicadorScroll.style
+                .opacity = "0";
+
+        }
+
+    }
+);
+
+
+
+/* ==================================================
+   CREAR LUCES DEL FONDO
+================================================== */
+
+const lucesCartaFinal =
+    document.getElementById(
+        "lucesCartaFinal"
+    );
+
+
+function crearLucesFinales(){
+
+    for(let i = 0; i < 35; i++){
+
+        const luz =
+            document.createElement(
+                "span"
+            );
+
+
+        luz.className =
+            "luz-carta-final";
+
+
+        luz.style.left =
+            Math.random() * 100 + "%";
+
+
+        luz.style.top =
+            Math.random() * 100 + "%";
+
+
+        luz.style.animationDelay =
+            Math.random() * 4 + "s";
+
+
+        luz.style.animationDuration =
+            (
+                2 +
+                Math.random() * 3
+            ) + "s";
+
+
+        lucesCartaFinal.appendChild(
+            luz
+        );
+
+    }
+
+}
+
+
+crearLucesFinales();
+
+</script>
+<!-- ==================================================
+     PARTE 5 FINAL — EL JARDÍN PARA MAGUI
+================================================== -->
+
+<style>
+
+/* ==========================================
+   BOTÓN FINAL DENTRO DE LA CARTA
+========================================== */
+
+#botonFinal{
+    display:block;
+
+    margin:
+        45px auto 10px;
+
+    padding:
+        15px 30px;
+
+    border:
+        1px solid rgba(134,47,80,.45);
+
+    border-radius:50px;
+
+    background:
+        rgba(134,47,80,.06);
+
+    color:#862f50;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    transform:
+        translateY(15px);
+
+    transition:
+        opacity 1s ease,
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+
+#botonFinal.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+#botonFinal:hover{
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(134,47,80,.12);
+
+    box-shadow:
+        0 8px 25px
+        rgba(100,30,60,.12);
+}
+
+
+
+/* ==========================================
+   ESCENA FINAL
+========================================== */
+
+#finalMagui{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+    height:100vh;
+    height:100dvh;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #54213c 0%,
+            #29101f 38%,
+            #120811 72%,
+            #070306 100%
+        );
+
+    overflow:hidden;
+
+    opacity:0;
+    visibility:hidden;
+
+    z-index:500;
+
+    transition:
+        opacity 2s ease,
+        visibility 2s ease;
+}
+
+
+#finalMagui.mostrar{
+
+    opacity:1;
+    visibility:visible;
+}
+
+
+
+/* ==========================================
+   LUNA / RESPLANDOR
+========================================== */
+
+.luna-final{
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    left:50%;
+    top:30%;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,205,225,.14),
+            rgba(255,160,200,.05) 45%,
+            transparent 70%
+        );
+
+    animation:
+        respirarFinal
+        5s ease-in-out infinite;
+}
+
+
+@keyframes respirarFinal{
+
+    0%,100%{
+        transform:
+            translate(-50%,-50%)
+            scale(.9);
+
+        opacity:.6;
+    }
+
+    50%{
+        transform:
+            translate(-50%,-50%)
+            scale(1.15);
+
+        opacity:1;
+    }
+
+}
+
+
+
+/* ==========================================
+   ESTRELLAS
+========================================== */
+
+.estrella-final{
+
+    position:absolute;
+
+    width:3px;
+    height:3px;
+
+    border-radius:50%;
+
+    background:#ffe1eb;
+
+    box-shadow:
+        0 0 10px
+        rgba(255,210,230,.9);
+
+    animation:
+        estrellaBrillo
+        3s ease-in-out infinite;
+}
+
+
+@keyframes estrellaBrillo{
+
+    0%,100%{
+        opacity:.15;
+        transform:scale(.7);
+    }
+
+    50%{
+        opacity:.9;
+        transform:scale(1.6);
+    }
+
+}
+
+
+
+/* ==========================================
+   MENSAJE FINAL
+========================================== */
+
+.mensaje-final{
+
+    position:absolute;
+
+    z-index:20;
+
+    top:8%;
+
+    left:50%;
+
+    transform:
+        translateX(-50%);
+
+    width:90%;
+    max-width:720px;
+
+    text-align:center;
+
+    color:white;
+
+    pointer-events:none;
+}
+
+
+.final-pequeno{
+
+    font-size:12px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:#dcaabd;
+
+    margin-bottom:18px;
+
+    opacity:0;
+}
+
+
+#finalMagui.mostrar
+.final-pequeno{
+
+    animation:
+        entradaFinal
+        1.5s ease forwards 1s;
+}
+
+
+
+.final-26{
+
+    font-size:
+        clamp(45px,10vw,75px);
+
+    font-weight:normal;
+
+    line-height:1;
+
+    color:#ffd0df;
+
+    margin-bottom:12px;
+
+    opacity:0;
+
+    text-shadow:
+        0 0 25px
+        rgba(255,150,190,.25);
+}
+
+
+#finalMagui.mostrar
+.final-26{
+
+    animation:
+        entradaFinal
+        1.7s ease forwards 1.6s;
+}
+
+
+
+.final-existes{
+
+    font-size:
+        clamp(22px,5vw,32px);
+
+    font-weight:normal;
+
+    font-style:italic;
+
+    color:#f7d7e2;
+
+    margin-bottom:22px;
+
+    opacity:0;
+}
+
+
+#finalMagui.mostrar
+.final-existes{
+
+    animation:
+        entradaFinal
+        1.5s ease forwards 2.2s;
+}
+
+
+
+.final-magui{
+
+    font-size:
+        clamp(27px,6vw,42px);
+
+    font-weight:normal;
+
+    color:white;
+
+    margin-bottom:20px;
+
+    opacity:0;
+}
+
+
+#finalMagui.mostrar
+.final-magui{
+
+    animation:
+        entradaFinal
+        1.5s ease forwards 2.8s;
+}
+
+
+
+.final-deseo{
+
+    max-width:560px;
+
+    margin:0 auto;
+
+    font-size:
+        clamp(14px,3.5vw,17px);
+
+    line-height:1.7;
+
+    color:#efd7df;
+
+    opacity:0;
+}
+
+
+#finalMagui.mostrar
+.final-deseo{
+
+    animation:
+        entradaFinal
+        1.5s ease forwards 3.5s;
+}
+
+
+
+.final-firma{
+
+    margin-top:17px;
+
+    font-size:18px;
+
+    font-style:italic;
+
+    color:#f4bfd1;
+
+    opacity:0;
+}
+
+
+#finalMagui.mostrar
+.final-firma{
+
+    animation:
+        entradaFinal
+        1.5s ease forwards 4.3s;
+}
+
+
+
+@keyframes entradaFinal{
+
+    from{
+        opacity:0;
+        transform:
+            translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+
+/* ==========================================
+   SUELO
+========================================== */
+
+.suelo{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+
+    bottom:0;
+
+    height:12%;
+
+    z-index:8;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(8,25,17,.7) 35%,
+            #07120c 100%
+        );
+}
+
+
+
+/* ==========================================
+   JARDÍN
+========================================== */
+
+#jardin{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+
+    bottom:0;
+
+    height:47%;
+
+    z-index:10;
+
+    pointer-events:none;
+}
+
+
+
+/* ==========================================
+   PLANTA GENERAL
+========================================== */
+
+.planta{
+
+    position:absolute;
+
+    bottom:4%;
+
+    width:80px;
+
+    height:300px;
+
+    transform-origin:
+        bottom center;
+}
+
+
+
+/* ==========================================
+   TALLOS
+========================================== */
+
+.tallo{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:50%;
+
+    width:5px;
+
+    height:0;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #285a39,
+            #4c8a58,
+            #234d32
+        );
+
+    animation:
+        crecerTallo
+        2.3s ease forwards;
+}
+
+
+@keyframes crecerTallo{
+
+    to{
+        height:var(--altura);
+    }
+
+}
+
+
+
+/* ==========================================
+   HOJAS
+========================================== */
+
+.hoja-flor{
+
+    position:absolute;
+
+    width:38px;
+    height:17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #3b754a,
+            #5c9865
+        );
+
+    border-radius:
+        100% 0 100% 0;
+
+    opacity:0;
+
+    transform:
+        scale(0);
+
+    animation:
+        aparecerHojaFlor
+        .8s ease forwards;
+}
+
+
+.hoja-izquierda{
+
+    left:4px;
+
+    bottom:65px;
+
+    transform-origin:
+        right center;
+
+    rotate:-25deg;
+}
+
+
+.hoja-derecha{
+
+    right:3px;
+
+    bottom:105px;
+
+    transform-origin:
+        left center;
+
+    rotate:205deg;
+}
+
+
+@keyframes aparecerHojaFlor{
+
+    to{
+        opacity:1;
+        transform:
+            scale(1);
+    }
+
+}
+
+
+
+/* ==========================================
+   CABEZA DE FLOR
+========================================== */
+
+.cabeza-flor{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:
+        translateX(-50%)
+        scale(0);
+
+    opacity:0;
+
+    transform-origin:
+        center center;
+
+    animation:
+        florecer
+        1.2s
+        cubic-bezier(.2,.8,.2,1.2)
+        forwards;
+}
+
+
+@keyframes florecer{
+
+    0%{
+        opacity:0;
+
+        transform:
+            translateX(-50%)
+            scale(0)
+            rotate(-15deg);
+    }
+
+    70%{
+        opacity:1;
+
+        transform:
+            translateX(-50%)
+            scale(1.15)
+            rotate(3deg);
+    }
+
+    100%{
+        opacity:1;
+
+        transform:
+            translateX(-50%)
+            scale(1)
+            rotate(0);
+    }
+
+}
+
+
+
+/* ==========================================
+   TULIPÁN
+========================================== */
+
+.tulipan{
+
+    width:54px;
+    height:48px;
+
+    border-radius:
+        8px 8px
+        28px 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d94d7b,
+            #f083a6
+        );
+
+    overflow:hidden;
+}
+
+
+.tulipan::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:35px;
+    height:35px;
+
+    left:-6px;
+    top:-17px;
+
+    background:#d94d7b;
+
+    transform:
+        rotate(45deg);
+
+    border-radius:
+        5px 15px 5px 15px;
+}
+
+
+.tulipan::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:35px;
+    height:35px;
+
+    right:-6px;
+    top:-17px;
+
+    background:#f083a6;
+
+    transform:
+        rotate(45deg);
+
+    border-radius:
+        15px 5px 15px 5px;
+}
+
+
+
+/* ==========================================
+   GIRASOL
+========================================== */
+
+.girasol{
+
+    width:68px;
+    height:68px;
+
+    border-radius:50%;
+
+    background:
+        repeating-conic-gradient(
+            from 0deg,
+            #e7a72c 0deg 12deg,
+            #f4c94b 12deg 24deg
+        );
+
+    box-shadow:
+        0 0 15px
+        rgba(240,190,50,.15);
+}
+
+
+.girasol::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:30px;
+    height:30px;
+
+    left:19px;
+    top:19px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #6b4323,
+            #3c2416
+        );
+
+    box-shadow:
+        inset 0 0 6px
+        rgba(0,0,0,.35);
+}
+
+
+
+/* ==========================================
+   GERBERA
+========================================== */
+
+.gerbera{
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:
+        repeating-conic-gradient(
+            #df608d 0deg 10deg,
+            #f19ab6 10deg 20deg
+        );
+}
+
+
+.gerbera::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:46px;
+    height:46px;
+
+    left:9px;
+    top:9px;
+
+    border-radius:50%;
+
+    background:
+        repeating-conic-gradient(
+            #ec7da3 0deg 10deg,
+            #f5b2c8 10deg 20deg
+        );
+}
+
+
+.gerbera::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:18px;
+    height:18px;
+
+    left:23px;
+    top:23px;
+
+    border-radius:50%;
+
+    background:#8c4a55;
+}
+
+
+
+/* ==========================================
+   MOVIMIENTO SUAVE DE LAS FLORES
+========================================== */
+
+.planta.animada{
+
+    animation:
+        balancearFlor
+        4s ease-in-out infinite;
+}
+
+
+@keyframes balancearFlor{
+
+    0%,100%{
+        rotate:-1deg;
+    }
+
+    50%{
+        rotate:2deg;
+    }
+
+}
+
+
+
+/* ==========================================
+   PÉTALOS FINALES
+========================================== */
+
+.petalo-final{
+
+    position:absolute;
+
+    top:-30px;
+
+    width:10px;
+    height:15px;
+
+    border-radius:
+        80% 20%
+        80% 20%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ef91af,
+            #c94e78
+        );
+
+    opacity:.7;
+
+    z-index:15;
+
+    animation:
+        caerPetaloFinal
+        linear forwards;
+}
+
+
+@keyframes caerPetaloFinal{
+
+    0%{
+        transform:
+            translateY(-10vh)
+            translateX(0)
+            rotate(0deg);
+
+        opacity:0;
+    }
+
+    10%{
+        opacity:.8;
+    }
+
+    50%{
+        transform:
+            translateY(50vh)
+            translateX(40px)
+            rotate(200deg);
+    }
+
+    100%{
+        transform:
+            translateY(115vh)
+            translateX(-30px)
+            rotate(450deg);
+
+        opacity:0;
+    }
+
+}
+
+
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media(max-width:600px){
+
+    .mensaje-final{
+        top:6%;
+    }
+
+
+    #jardin{
+        height:43%;
+    }
+
+
+    .planta{
+        transform:
+            scale(.8);
+
+        transform-origin:
+            bottom center;
+    }
+
+
+    .final-deseo{
+        max-width:90%;
+    }
+
+}
+
+</style>
+
+
+
+<!-- ==================================================
+     BOTÓN FINAL DENTRO DE LA CARTA
+================================================== -->
+
+<script>
+
+/*
+Insertamos automáticamente
+el botón debajo de la firma.
+*/
+
+const cierreCarta =
+    document.querySelector(
+        ".cierre-carta"
+    );
+
+
+const botonFinal =
+    document.createElement(
+        "button"
+    );
+
+
+botonFinal.id =
+    "botonFinal";
+
+
+botonFinal.innerHTML =
+    "Tengo una última sorpresa para ti ❤️";
+
+
+cierreCarta.appendChild(
+    botonFinal
+);
+
+</script>
+
+
+
+<!-- ==================================================
+     ESCENA FINAL
+================================================== -->
+
+<section id="finalMagui">
+
+
+    <div class="luna-final"></div>
+
+
+    <div
+        id="estrellasFinales">
+    </div>
+
+
+    <div class="mensaje-final">
+
+
+        <div class="final-pequeno">
+
+            4 de octubre
+
+        </div>
+
+
+        <h2 class="final-26">
+
+            26 años de ti.
+
+        </h2>
+
+
+        <h3 class="final-existes">
+
+            Y qué bonito que existas.
+
+        </h3>
+
+
+        <div class="final-magui">
+
+            Feliz cumpleaños,<br>
+
+            <em>
+                mi Magui preciosa.
+            </em>
+
+            ❤️
+
+        </div>
+
+
+        <p class="final-deseo">
+
+            Que la vida te regale
+            tantas cosas bonitas
+            como las que tú has
+            traído a la mía.
+
+        </p>
+
+
+        <div class="final-firma">
+
+            Te adoro.<br>
+            Santi
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- JARDÍN -->
+
+    <div id="jardin"></div>
+
+
+    <div class="suelo"></div>
+
+
+</section>
+
+
+
+<script>
+
+/* ==========================================
+   ELEMENTOS
+========================================== */
+
+const finalMagui =
+    document.getElementById(
+        "finalMagui"
+    );
+
+
+const jardin =
+    document.getElementById(
+        "jardin"
+    );
+
+
+const estrellasFinales =
+    document.getElementById(
+        "estrellasFinales"
+    );
+
+
+
+/* ==========================================
+   MOSTRAR BOTÓN CUANDO
+   LLEGUE AL FINAL DE LA CARTA
+========================================== */
+
+cartaCompleta.addEventListener(
+    "scroll",
+    function(){
+
+        const distanciaFinal =
+            cartaCompleta.scrollHeight
+            -
+            cartaCompleta.scrollTop
+            -
+            cartaCompleta.clientHeight;
+
+
+        if(distanciaFinal < 180){
+
+            /* Ocultar sigue leyendo */
+
+            indicadorScroll.style
+                .display = "none";
+
+
+            /* Mostrar botón final */
+
+            botonFinal.classList.add(
+                "visible"
+            );
+
+        }
+
+    }
+);
+
+
+
+/* ==========================================
+   ABRIR ESCENA FINAL
+========================================== */
+
+botonFinal.addEventListener(
+    "click",
+    function(){
+
+
+        /* Desvanecer carta */
+
+        cartaCompleta.style.opacity =
+            "0";
+
+
+        setTimeout(function(){
+
+
+            cartaCompleta.style
+                .visibility =
+                "hidden";
+
+
+            /* Mostrar final */
+
+            finalMagui.classList.add(
+                "mostrar"
+            );
+
+
+            /* Crear jardín */
+
+            setTimeout(function(){
+
+                crearJardin();
+
+            },1000);
+
+
+            /* Pétalos después */
+
+            setTimeout(function(){
+
+                comenzarPetalosFinales();
+
+            },4800);
+
+
+        },1200);
+
+    }
+);
+
+
+
+/* ==========================================
+   CREAR ESTRELLAS
+========================================== */
+
+function crearEstrellasFinales(){
+
+    for(let i = 0; i < 45; i++){
+
+        const estrella =
+            document.createElement(
+                "span"
+            );
+
+
+        estrella.className =
+            "estrella-final";
+
+
+        estrella.style.left =
+            Math.random() * 100
+            + "%";
+
+
+        estrella.style.top =
+            Math.random() * 85
+            + "%";
+
+
+        estrella.style
+            .animationDelay =
+            Math.random() * 5
+            + "s";
+
+
+        estrella.style
+            .animationDuration =
+            (
+                2 +
+                Math.random() * 4
+            ) + "s";
+
+
+        estrellasFinales.appendChild(
+            estrella
+        );
+
+    }
+
+}
+
+
+crearEstrellasFinales();
+
+
+
+/* ==========================================
+   DATOS DEL JARDÍN
+========================================== */
+
+const flores = [
+
+    {
+        tipo:"tulipan",
+        x:5,
+        altura:155,
+        retraso:.2
+    },
+
+    {
+        tipo:"gerbera",
+        x:14,
+        altura:205,
+        retraso:.7
+    },
+
+    {
+        tipo:"tulipan",
+        x:23,
+        altura:170,
+        retraso:1.1
+    },
+
+    {
+        tipo:"girasol",
+        x:33,
+        altura:235,
+        retraso:.4
+    },
+
+    {
+        tipo:"gerbera",
+        x:43,
+        altura:185,
+        retraso:1.4
+    },
+
+    {
+        tipo:"tulipan",
+        x:52,
+        altura:225,
+        retraso:.8
+    },
+
+    {
+        tipo:"girasol",
+        x:62,
+        altura:245,
+        retraso:1.7
+    },
+
+    {
+        tipo:"gerbera",
+        x:72,
+        altura:195,
+        retraso:.5
+    },
+
+    {
+        tipo:"tulipan",
+        x:81,
+        altura:220,
+        retraso:1.2
+    },
+
+    {
+        tipo:"gerbera",
+        x:91,
+        altura:165,
+        retraso:1.8
+    }
+
+];
+
+
+
+/* ==========================================
+   CREAR JARDÍN
+========================================== */
+
+function crearJardin(){
+
+
+    flores.forEach(
+        function(flor){
+
+
+            const planta =
+                document.createElement(
+                    "div"
+                );
+
+
+            planta.className =
+                "planta";
+
+
+            planta.style.left =
+                "calc("
+                + flor.x
+                + "% - 40px)";
+
+
+
+            /* TALLO */
+
+            const tallo =
+                document.createElement(
+                    "div"
+                );
+
+
+            tallo.className =
+                "tallo";
+
+
+            tallo.style.setProperty(
+                "--altura",
+                flor.altura + "px"
+            );
+
+
+            tallo.style
+                .animationDelay =
+                flor.retraso + "s";
+
+
+
+            /* HOJA IZQUIERDA */
+
+            const hoja1 =
+                document.createElement(
+                    "div"
+                );
+
+
+            hoja1.className =
+                "hoja-flor hoja-izquierda";
+
+
+            hoja1.style
+                .animationDelay =
+                (
+                    flor.retraso + 1
+                ) + "s";
+
+
+
+            /* HOJA DERECHA */
+
+            const hoja2 =
+                document.createElement(
+                    "div"
+                );
+
+
+            hoja2.className =
+                "hoja-flor hoja-derecha";
+
+
+            hoja2.style
+                .animationDelay =
+                (
+                    flor.retraso + 1.3
+                ) + "s";
+
+
+
+            /* CABEZA */
+
+            const cabeza =
+                document.createElement(
+                    "div"
+                );
+
+
+            cabeza.className =
+                "cabeza-flor "
+                + flor.tipo;
+
+
+            cabeza.style.bottom =
+                (
+                    flor.altura - 25
+                ) + "px";
+
+
+            cabeza.style
+                .animationDelay =
+                (
+                    flor.retraso + 1.8
+                ) + "s";
+
+
+
+            /* ARMAMOS PLANTA */
+
+            planta.appendChild(
+                tallo
+            );
+
+
+            planta.appendChild(
+                hoja1
+            );
+
+
+            planta.appendChild(
+                hoja2
+            );
+
+
+            planta.appendChild(
+                cabeza
+            );
+
+
+            jardin.appendChild(
+                planta
+            );
+
+
+
+            /* Movimiento suave
+               después de crecer */
+
+            setTimeout(
+                function(){
+
+                    planta.classList.add(
+                        "animada"
+                    );
+
+                },
+
+                (
+                    flor.retraso
+                    + 3.2
+                ) * 1000
+
+            );
+
+
+        }
+    );
+
+}
+
+
+
+/* ==========================================
+   PÉTALOS DEL FINAL
+========================================== */
+
+function lanzarPetaloFinal(){
+
+    const petalo =
+        document.createElement(
+            "span"
+        );
+
+
+    petalo.className =
+        "petalo-final";
+
+
+    petalo.style.left =
+        Math.random() * 100
+        + "%";
+
+
+    const tamaño =
+        7 +
+        Math.random() * 9;
+
+
+    petalo.style.width =
+        tamaño + "px";
+
+
+    petalo.style.height =
+        (
+            tamaño * 1.5
+        ) + "px";
+
+
+    petalo.style
+        .animationDuration =
+        (
+            7 +
+            Math.random() * 5
+        ) + "s";
+
+
+    finalMagui.appendChild(
+        petalo
+    );
+
+
+    setTimeout(
+        function(){
+
+            petalo.remove();
+
+        },
+
+        13000
+
+    );
+
+}
+
+
+
+function comenzarPetalosFinales(){
+
+
+    /* Primera lluvia */
+
+    for(let i = 0; i < 22; i++){
+
+        setTimeout(
+            function(){
+
+                lanzarPetaloFinal();
+
+            },
+
+            i * 220
+
+        );
+
+    }
+
+
+    /* Después siguen
+       cayendo lentamente */
+
+    setInterval(
+        function(){
+
+            if(
+                finalMagui.classList
+                    .contains("mostrar")
+            ){
+
+                lanzarPetaloFinal();
+
+            }
+
+        },
+
+        900
+
+    );
+
+}
+
+</script>
+
+
+<!-- ==================================================
+     FIN DE LA PÁGINA ❤️
+================================================== -->
+<!-- ==================================================
+     MÚSICA — VIENTO
+================================================== -->
+
+<audio id="musicaMagui" loop preload="auto">
+    <source src="Viento.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- CONTROL DE MÚSICA -->
+
+<div id="controlMusica">
+
+    <span class="notaMusica">
+        ♫
+    </span>
+
+    <span class="nombreCancion">
+        Viento — Caifanes
+    </span>
+
+    <button id="botonMusica">
+        ❚❚
+    </button>
+
+</div>
+
+
+<style>
+
+/* ==============================
+   CONTROL DE MÚSICA
+================================ */
+
+#controlMusica{
+
+    position:fixed;
+
+    left:18px;
+    bottom:18px;
+
+    z-index:9999;
+
+    display:flex;
+    align-items:center;
+    gap:9px;
+
+    padding:
+        9px 13px;
+
+    border:
+        1px solid
+        rgba(255,210,225,.25);
+
+    border-radius:30px;
+
+    background:
+        rgba(20,6,14,.58);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    color:#f7dce6;
+
+    font-family:
+        Georgia,
+        serif;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,.18);
+
+    opacity:0;
+
+    transform:
+        translateY(15px);
+
+    pointer-events:none;
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+
+#controlMusica.visible{
+
+    opacity:.82;
+
+    transform:
+        translateY(0);
+
+    pointer-events:auto;
+}
+
+
+#controlMusica:hover{
+    opacity:1;
+}
+
+
+.notaMusica{
+
+    font-size:16px;
+
+    animation:
+        notaLatido
+        2s ease-in-out infinite;
+}
+
+
+@keyframes notaLatido{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.15);
+    }
+
+}
+
+
+.nombreCancion{
+
+    font-size:12px;
+
+    white-space:nowrap;
+}
+
+
+#botonMusica{
+
+    width:28px;
+    height:28px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,255,255,.10);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:10px;
+
+    transition:
+        background .3s ease,
+        transform .3s ease;
+}
+
+
+#botonMusica:hover{
+
+    background:
+        rgba(255,255,255,.20);
+
+    transform:scale(1.08);
+}
+
+
+/* CELULAR */
+
+@media(max-width:600px){
+
+    #controlMusica{
+
+        left:12px;
+        bottom:12px;
+
+        padding:
+            8px 11px;
+    }
+
+
+    .nombreCancion{
+        font-size:11px;
+    }
+
+}
+
+</style>
+
+
+<script>
+
+/* ==================================================
+   CONFIGURACIÓN DE LA MÚSICA
+================================================== */
+
+const musicaMagui =
+    document.getElementById(
+        "musicaMagui"
+    );
+
+
+const controlMusica =
+    document.getElementById(
+        "controlMusica"
+    );
+
+
+const botonMusica =
+    document.getElementById(
+        "botonMusica"
+    );
+
+
+let musicaIniciada = false;
+
+
+
+/* ==================================================
+   INICIAR VIENTO AL ABRIR LA SORPRESA
+================================================== */
+
+botonAbrir.addEventListener(
+    "click",
+    function(){
+
+        if(musicaIniciada){
+            return;
+        }
+
+
+        musicaIniciada = true;
+
+
+        /* Empieza prácticamente
+           en silencio */
+
+        musicaMagui.volume = 0.01;
+
+
+        const reproduccion =
+            musicaMagui.play();
+
+
+        if(reproduccion !== undefined){
+
+            reproduccion
+            .then(function(){
+
+                /* Mostrar control */
+
+                setTimeout(
+                    function(){
+
+                        controlMusica
+                            .classList.add(
+                                "visible"
+                            );
+
+                    },
+                    1200
+                );
+
+
+                /* Fade-in */
+
+                subirVolumen();
+
+            })
+            .catch(function(error){
+
+                console.log(
+                    "El navegador bloqueó el audio:",
+                    error
+                );
+
+            });
+
+        }
+
+    }
+);
+
+
+
+/* ==================================================
+   FADE-IN DE 4 SEGUNDOS
+================================================== */
+
+function subirVolumen(){
+
+    let volumen = 0.01;
+
+
+    const fade =
+        setInterval(
+            function(){
+
+                volumen += 0.01;
+
+
+                /*
+                Volumen máximo:
+                0.35 = 35%
+                */
+
+                if(volumen >= 0.35){
+
+                    musicaMagui.volume =
+                        0.35;
+
+                    clearInterval(
+                        fade
+                    );
+
+                    return;
+                }
+
+
+                musicaMagui.volume =
+                    volumen;
+
+            },
+
+            120
+
+        );
+
+}
+
+
+
+/* ==================================================
+   PAUSAR / REANUDAR
+================================================== */
+
+botonMusica.addEventListener(
+    "click",
+    function(){
+
+        if(musicaMagui.paused){
+
+            musicaMagui
+                .play();
+
+            botonMusica.innerHTML =
+                "❚❚";
+
+        }
+
+        else{
+
+            musicaMagui
+                .pause();
+
+            botonMusica.innerHTML =
+                "▶";
+
+        }
+
+    }
+);
+
+
+
+/* ==================================================
+   SI LA CANCIÓN SE PAUSA
+=============================================== */
+
+musicaMagui.addEventListener(
+    "pause",
+    function(){
+
+        botonMusica.innerHTML =
+            "▶";
+
+    }
+);
+
+
+
+/* ==================================================
+   SI LA CANCIÓN SE REANUDA
+=============================================== */
+
+musicaMagui.addEventListener(
+    "play",
+    function(){
+
+        botonMusica.innerHTML =
+            "❚❚";
+
+    }
+);
+
+</script>
+</body>
+</html>
